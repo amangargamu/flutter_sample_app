@@ -7,9 +7,13 @@
 
 import 'package:bigspoon_foods/app/app.dart';
 import 'package:bigspoon_foods/counter/counter.dart';
+import 'package:bigspoon_foods/utils/prefs.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
+  setUp(() async {
+    await Prefs.init();
+  });
   group('App', () {
     testWidgets('renders CounterPage', (tester) async {
       await tester.pumpWidget(const App());

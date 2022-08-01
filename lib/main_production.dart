@@ -8,19 +8,8 @@
 import 'package:bigspoon_foods/app/app.dart';
 import 'package:bigspoon_foods/bootstrap.dart';
 import 'package:bigspoon_foods/di/service_locator.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flutter/cupertino.dart';
 
-void main() {
-  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
-
-  setupDependencyLocator();
-  bootstrap(() => const App());
-}
-
-Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  await Firebase.initializeApp();
-
-  debugPrint('Handling a background message: ${message.messageId}');
+Future<void> main() async {
+  await setupDependencyLocator();
+  await bootstrap(() => const App());
 }

@@ -154,6 +154,79 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
 }
 ```
 
+### TextTheme
+## Features
+Utility and Extensions to easily add and change text styles to your ```Text``` widgets.
+
+## Getting started
+```dart
+import 'theme.dart' as theme;
+
+
+MaterialApp(
+    lightThem:theme.lightTheme,
+    darkTheme:theme.darkTheme,
+)
+```
+
+## Usage
+
+### 1. To access a text style in flutter
+
+```dart 
+context.texTheme.headline
+```
+
+### 2. To change a text style across the entire project
+
+1. Go to ```text_styles.dart```
+2. Change the particular text style's getter
+   for example: to change ```Color``` of headline1 to ```Colors.blue```:
+```dart
+static TextStyle get headline1 {
+   return baseTextStyle.copyWith(
+        fontSize: 40,
+        color:Colors.blue,
+    );
+  }
+```
+
+### 3. To change a text style for only 1 use case:
+for example, to use headline1 but with Arial font
+```dart
+context.textTheme.headline1.copyWith(fontFamily:'Arial')
+```
+
+### 4. To add new extensions
+Say we are using this block of code **a lot**:
+```dart
+context.textTheme.headline1.copyWith(fontFamily:'Arial')
+```
+
+Then we can go to ```extensions.dart``` and add a FontFamily
+``` extension``` on ```TextStyle```
+```dart
+  TextStyle get arial {
+    return copyWith(fontFamily: 'Arial');
+  }
+```
+
+Then To access arial type of headline1 or any other text style we can do:
+
+```dart
+context.texStyle.headline1.arial
+```
+
+
+
+## Additional information
+
+For ```darkTheme``` there is extension which converts a black text to white, unless provided with a darkTheme ```Color```.
+For example:
+```dart
+context.texTheme.headline1.convertToDark()
+```
+
 [coverage_badge]: coverage_badge.svg
 [flutter_localizations_link]: https://api.flutter.dev/flutter/flutter_localizations/flutter_localizations-library.html
 [internationalization_link]: https://flutter.dev/docs/development/accessibility-and-localization/internationalization

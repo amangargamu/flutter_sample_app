@@ -5,60 +5,46 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
-import 'package:bigspoon_foods/counter/counter.dart';
-import 'package:bigspoon_foods/l10n/l10n.dart';
+import 'package:bigspoon_foods/theme/custom_theme.dart';
+import 'package:bigspoon_foods/typography/text_styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CounterPage extends StatelessWidget {
   const CounterPage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) => CounterCubit(),
-      child: const CounterView(),
-    );
-  }
-}
-
-class CounterView extends StatelessWidget {
-  const CounterView({Key? key}) : super(key: key);
 
   //final userRepository = getIt.get<UserRepository>();
 
   @override
   Widget build(BuildContext context) {
-    final l10n = context.l10n;
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.counterAppBarTitle)),
-      body: const Center(child: CounterText()),
-      floatingActionButton: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          FloatingActionButton(
-            onPressed: () => context.read<CounterCubit>().increment(),
-            child: const Icon(Icons.add),
+      appBar: AppBar(
+        title: Text('Theme App', style: context.textTheme.bodyText1),
+      ),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+          child: Column(
+            children: List.generate(
+              3,
+              (index) => Row(
+                children: [
+                  Text(CustomThemeMode.values[index].name),
+                  const Spacer(),
+                  Radio(
+                    value: CustomThemeMode.values[index],
+                    groupValue: CustomTheme.of(context).mode,
+                    onChanged: (value) {
+                      debugPrint('THEME:$value');
+                      CustomTheme.of(context)
+                          .setThemeMode(value! as CustomThemeMode);
+                    },
+                  )
+                ],
+              ),
+            ),
           ),
-          const SizedBox(height: 8),
-          FloatingActionButton(
-            onPressed: () => context.read<CounterCubit>().decrement(),
-            child: const Icon(Icons.remove),
-          ),
-        ],
+        ),
       ),
     );
-  }
-}
-
-class CounterText extends StatelessWidget {
-  const CounterText({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final count = context.select((CounterCubit cubit) => cubit.state);
-    return Text('$count', style: theme.textTheme.headline1);
   }
 }
