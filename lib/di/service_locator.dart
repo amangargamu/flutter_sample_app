@@ -1,6 +1,7 @@
 import 'package:bigspoon_foods/data/network/api/user/user_api.dart';
 import 'package:bigspoon_foods/data/network/dio_client.dart';
 import 'package:bigspoon_foods/data/repository/user_repository.dart';
+import 'package:bigspoon_foods/navigation/routes.gr.dart';
 import 'package:bigspoon_foods/notifications/firebase_notification.dart';
 import 'package:bigspoon_foods/notifications/local_notification.dart';
 import 'package:bigspoon_foods/utils/prefs.dart';
@@ -24,7 +25,8 @@ Future<void> setupDependencyLocator() async {
     ..registerSingleton(Dio())
     ..registerSingleton(DioClient(getIt<Dio>()))
     ..registerSingleton(UserApi(dioClient: getIt<DioClient>()))
-    ..registerSingleton(UserRepository(getIt.get<UserApi>()));
+    ..registerSingleton(UserRepository(getIt.get<UserApi>()))
+    ..registerSingleton<AppRouter>(AppRouter());
 }
 
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
