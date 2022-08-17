@@ -6,18 +6,22 @@
 // https://opensource.org/licenses/MIT.
 
 import 'package:bigspoon_foods/app/app.dart';
-import 'package:bigspoon_foods/counter/counter.dart';
+import 'package:bigspoon_foods/navigation/routes.gr.dart';
+import 'package:bigspoon_foods/theme/custom_theme.dart';
 import 'package:bigspoon_foods/utils/prefs.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:get_it/get_it.dart';
 
 void main() {
   setUp(() async {
+    final getIt = GetIt.instance;
     await Prefs.init();
+    getIt.registerSingleton<AppRouter>(AppRouter());
   });
   group('App', () {
     testWidgets('renders CounterPage', (tester) async {
       await tester.pumpWidget(const App());
-      expect(find.byType(CounterPage), findsOneWidget);
+      expect(find.byType(CustomTheme), findsOneWidget);
     });
   });
 }
