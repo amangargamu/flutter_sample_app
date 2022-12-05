@@ -1,0 +1,7 @@
+{
+    "@@locale": "hi",
+    "counterAppBarTitle": "काउंटर",
+    "@counterAppBarTitle": {
+        "description": "काउंटर पेज के AppBar में दिखाया गया टेक्स्ट"
+    }
+}
