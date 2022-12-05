@@ -5,7 +5,10 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:grappus_mobile/navigation/routes.gr.dart';
+import 'package:grappus_mobile/otp/view/send_otp_screen.dart';
 import 'package:grappus_mobile/theme/custom_theme.dart';
 import 'package:grappus_mobile/typography/text_styles.dart';
 
@@ -24,24 +27,34 @@ class CounterPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
           child: Column(
-            children: List.generate(
-              3,
-              (index) => Row(
-                children: [
-                  Text(CustomThemeMode.values[index].name),
-                  const Spacer(),
-                  Radio(
-                    value: CustomThemeMode.values[index],
-                    groupValue: CustomTheme.of(context).mode,
-                    onChanged: (value) {
-                      debugPrint('THEME:$value');
-                      CustomTheme.of(context)
-                          .setThemeMode(value! as CustomThemeMode);
-                    },
-                  )
-                ],
+            children: [
+              GestureDetector(
+                onTap: () {
+                  context.pushRoute(SendOTPScreenRoute());
+                },
+                child: const Text('OTP Page'),
               ),
-            ),
+              Column(
+                children: List.generate(
+                  3,
+                  (index) => Row(
+                    children: [
+                      Text(CustomThemeMode.values[index].name),
+                      const Spacer(),
+                      Radio(
+                        value: CustomThemeMode.values[index],
+                        groupValue: CustomTheme.of(context).mode,
+                        onChanged: (value) {
+                          debugPrint('THEME:$value');
+                          CustomTheme.of(context)
+                              .setThemeMode(value! as CustomThemeMode);
+                        },
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),

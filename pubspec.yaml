@@ -24,6 +24,7 @@ dependencies:
   get_it: ^7.2.0
   intl: ^0.17.0
   shared_preferences: ^2.0.15
+  sms_autofill: ^2.2.0
 
 
 dev_dependencies:
