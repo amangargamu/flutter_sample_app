@@ -1,4 +1,4 @@
-name: bigspoon_foods
+name: Flutter Sample App
 
 on: [pull_request, push]
 

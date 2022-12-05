@@ -1,11 +1,11 @@
 {
-    "name": "Bigspoon Foods",
-    "short_name": "Bigspoon Foods",
+    "name": "Flutter Sample",
+    "short_name": "Flutter Sample",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Bigspoon Mobile App",
+    "description": "Flutter Sample Mobile App",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

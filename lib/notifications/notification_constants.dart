@@ -5,7 +5,7 @@
 
 class KNotifications {
   static const notificationChannelId = 'com.grappus.mobile';
-  static const notificationChannelName = 'BigSpoon';
+  static const notificationChannelName = 'FlutterSampleApp';
   static const notificationChannelDescription =
-      'BigSpoon notification channel for heads up notifications';
+      'Flutter Grappus Sample app notification channel for heads up notifications';
 }
