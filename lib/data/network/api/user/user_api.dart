@@ -1,8 +1,8 @@
-import 'package:bigspoon_foods/data/models/user/user_model.dart';
-import 'package:bigspoon_foods/data/network/api/endpoints.dart';
-import 'package:bigspoon_foods/data/network/api/error/error_handler.dart';
-import 'package:bigspoon_foods/data/network/api/error/error_response.dart';
-import 'package:bigspoon_foods/data/network/dio_client.dart';
+import 'package:grappus_mobile/data/models/user/user_model.dart';
+import 'package:grappus_mobile/data/network/api/endpoints.dart';
+import 'package:grappus_mobile/data/network/api/error/error_handler.dart';
+import 'package:grappus_mobile/data/network/api/error/error_response.dart';
+import 'package:grappus_mobile/data/network/dio_client.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 

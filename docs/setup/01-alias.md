@@ -29,7 +29,7 @@ $ alias short-name=" your custom command here"
 Here is an actual example:
 
 ```sh
-$ alias run-app="npm run start"
+$ alias run-mobile="npm run start"
 ```
 
 Now you can use the "run-app" shortcut to run your application.
@@ -67,7 +67,7 @@ organizations purposes, you can leave a comment before your aliases something li
 
 ```sh
 # My custom aliases
-alias run-app="npm run start"
+alias run-mobile="npm run start"
 alias rebase-develop="git pull origin --rebase develop"
 ```
 

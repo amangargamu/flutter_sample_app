@@ -179,11 +179,11 @@ First, create or use a repository which provides a data Stream. For example, the
 class AppIdeasRepository {
   int _currentAppIdea = 0;
   final List<String> _ideas = [
-    "Future prediction app that rewards you if you predict the next day's news",
-    'Dating app for fish that lets your aquarium occupants find true love',
-    'Social media app that pays you when your data is sold',
-    'JavaScript framework gambling app that lets you bet on the next big thing',
-    'Solitaire app that freezes before you can win',
+    "Future prediction mobile that rewards you if you predict the next day's news",
+    'Dating mobile for fish that lets your aquarium occupants find true love',
+    'Social media mobile that pays you when your data is sold',
+    'JavaScript framework gambling mobile that lets you bet on the next big thing',
+    'Solitaire mobile that freezes before you can win',
   ];
 
   Stream<String> productIdeas() async* {
@@ -202,8 +202,8 @@ class AppIdeaRankingBloc
       : _appIdeasRepo = appIdeasRepo,
         super(AppIdeaInitialRankingState()) {
     on<AppIdeaStartRankingEvent>((event, emit) async {
-      // When we are told to start ranking app ideas, we will listen to the
-      // stream of app ideas and emit a state for each one.
+      // When we are told to start ranking mobile ideas, we will listen to the
+      // stream of mobile ideas and emit a state for each one.
       await emit.forEach(
         _appIdeasRepo.productIdeas(),
         onData: (String idea) => AppIdeaRankingIdeaState(idea: idea),

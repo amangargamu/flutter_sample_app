@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bigspoon.app.bigspoon_foods">
+    package="com.grappus.mobile">
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application

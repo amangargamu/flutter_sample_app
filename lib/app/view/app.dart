@@ -6,12 +6,12 @@
 // https://opensource.org/licenses/MIT.
 
 import 'package:auto_route/auto_route.dart';
-import 'package:bigspoon_foods/di/service_locator.dart';
-import 'package:bigspoon_foods/l10n/l10n.dart';
-import 'package:bigspoon_foods/navigation/routes.gr.dart';
-import 'package:bigspoon_foods/theme/custom_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:grappus_mobile/di/service_locator.dart';
+import 'package:grappus_mobile/l10n/l10n.dart';
+import 'package:grappus_mobile/navigation/routes.gr.dart';
+import 'package:grappus_mobile/theme/custom_theme.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);

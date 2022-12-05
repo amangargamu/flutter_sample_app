@@ -7,7 +7,7 @@
 // @AdaptiveAutoRouter
 // @CustomAutoRouter
 import 'package:auto_route/auto_route.dart';
-import 'package:bigspoon_foods/counter/counter.dart';
+import 'package:grappus_mobile/counter/counter.dart';
 
 @MaterialAutoRouter(
   // replaceInRouteName: 'Page,Route',

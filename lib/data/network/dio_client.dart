@@ -1,7 +1,7 @@
 import 'dart:developer';
 
-import 'package:bigspoon_foods/data/network/api/endpoints.dart';
 import 'package:dio/dio.dart';
+import 'package:grappus_mobile/data/network/api/endpoints.dart';
 
 class DioClient {
   // injecting dio instance

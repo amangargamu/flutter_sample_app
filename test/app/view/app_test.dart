@@ -5,10 +5,10 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
-import 'package:bigspoon_foods/app/app.dart';
-import 'package:bigspoon_foods/navigation/routes.gr.dart';
-import 'package:bigspoon_foods/theme/custom_theme.dart';
-import 'package:bigspoon_foods/utils/prefs.dart';
+import 'package:grappus_mobile/app/app.dart';
+import 'package:grappus_mobile/navigation/routes.gr.dart';
+import 'package:grappus_mobile/theme/custom_theme.dart';
+import 'package:grappus_mobile/utils/prefs.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:get_it/get_it.dart';
 

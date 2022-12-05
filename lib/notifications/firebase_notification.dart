@@ -2,9 +2,9 @@
  * @author Noor Bhatia
  * Created on 01-08-2022
  */
-import 'package:bigspoon_foods/notifications/local_notification.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:grappus_mobile/notifications/local_notification.dart';
 
 class FirebaseNotificationManager {
   Future<void> setupInteractedMessage() async {
@@ -21,7 +21,7 @@ class FirebaseNotificationManager {
       _handleMessage(initialMessage);
     }
 
-    // Also handle any interaction when the app is in the background via a
+    // Also handle any interaction when the mobile is in the background via a
     // Stream listener
     FirebaseMessaging.onMessageOpenedApp.listen(_handleMessage);
     FirebaseMessaging.onMessage.listen(

@@ -2,9 +2,9 @@
  * @author Noor Bhatia
  * Created on 28-07-2022
  */
-import 'package:bigspoon_foods/typography/text_styles.dart';
-import 'package:bigspoon_foods/utils/app_colors.dart';
-import 'package:bigspoon_foods/utils/prefs.dart';
+import 'package:grappus_mobile/typography/text_styles.dart';
+import 'package:grappus_mobile/utils/app_colors.dart';
+import 'package:grappus_mobile/utils/prefs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 

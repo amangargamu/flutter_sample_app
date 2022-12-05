@@ -1,7 +1,8 @@
-import 'package:bigspoon_foods/utils/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:grappus_mobile/utils/app_colors.dart';
 
 part 'font_weights.dart';
+
 part 'text_style_extensions.dart';
 
 abstract class CustomTextStyles {

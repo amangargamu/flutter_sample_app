@@ -5,9 +5,9 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
-import 'package:bigspoon_foods/theme/custom_theme.dart';
-import 'package:bigspoon_foods/typography/text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:grappus_mobile/theme/custom_theme.dart';
+import 'package:grappus_mobile/typography/text_styles.dart';
 
 class CounterPage extends StatelessWidget {
   const CounterPage({Key? key}) : super(key: key);

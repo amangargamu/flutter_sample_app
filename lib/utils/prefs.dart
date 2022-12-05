@@ -1,4 +1,4 @@
-import 'package:bigspoon_foods/theme/custom_theme.dart';
+import 'package:grappus_mobile/theme/custom_theme.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 //ignore_for_file:avoid_setters_without_getters

@@ -1,4 +1,4 @@
-package com.bigspoon.app.bigspoon_foods
+package com.grappus.mobile
 
 import io.flutter.embedding.android.FlutterActivity
 

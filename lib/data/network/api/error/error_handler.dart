@@ -1,8 +1,8 @@
 // ignore_for_file: unnecessary_type_check
 
-import 'package:bigspoon_foods/data/network/api/endpoints.dart';
-import 'package:bigspoon_foods/data/network/api/error/error_response.dart';
 import 'package:dio/dio.dart';
+import 'package:grappus_mobile/data/network/api/endpoints.dart';
+import 'package:grappus_mobile/data/network/api/error/error_response.dart';
 
 const errorGeneral = 'Something went wrong. Please try again!';
 const errorRequestTimeOut =

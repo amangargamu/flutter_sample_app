@@ -1,10 +1,10 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:bigspoon_foods/notifications/notification_constants.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:grappus_mobile/notifications/notification_constants.dart';
 
 class LocalNotificationService {
   static final FlutterLocalNotificationsPlugin _notificationsPlugin =
@@ -34,9 +34,9 @@ class LocalNotificationService {
     await _notificationsPlugin.initialize(
       initializationSettings,
       onSelectNotification: (String? payload) async {
-        /*  Handles notification tap when app is in foreground,
+        /*  Handles notification tap when mobile is in foreground,
       if payload is null then nothing happens on notification tap
-      as the app is already in foreground  */
+      as the mobile is already in foreground  */
         if (payload != null) {}
       },
     );
