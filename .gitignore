@@ -101,11 +101,13 @@ unlinked_spec.ds
 coverage/
 
 # Submodules
-!pubspec.lock
+pubspec.lock
 packages/**/pubspec.lock
 
 # Web related
 lib/generated_plugin_registrant.dart
+windows/flutter/generated_plugin_registrant.cc
+windows/flutter/generated_plugins.cmake
 
 # Symbolication related
 app.*.symbols
