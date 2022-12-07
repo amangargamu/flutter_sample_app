@@ -1,7 +1,7 @@
+/*
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:grappus_mobile/notifications/notification_constants.dart';
@@ -23,7 +23,8 @@ class LocalNotificationService {
     const channel = AndroidNotificationChannel(
       KNotifications.notificationChannelId, // id
       KNotifications.notificationChannelName, // title
-      description: KNotifications.notificationChannelDescription, // description
+      description: KNotifications.notificationChannelDescription,
+      // description
       importance: Importance.max,
     );
     await _notificationsPlugin
@@ -34,9 +35,11 @@ class LocalNotificationService {
     await _notificationsPlugin.initialize(
       initializationSettings,
       onSelectNotification: (String? payload) async {
-        /*  Handles notification tap when mobile is in foreground,
+        */
+/*  Handles notification tap when mobile is in foreground,
       if payload is null then nothing happens on notification tap
-      as the mobile is already in foreground  */
+      as the mobile is already in foreground  */ /*
+
         if (payload != null) {}
       },
     );
@@ -53,9 +56,11 @@ class LocalNotificationService {
     );
   }
 
-  /*
+  */
+/*
    * The permission step is required for IOS devices.
-   * */
+   * */ /*
+
   static Future<void> requestNotificationPermission() async {
     if (Platform.isIOS) {
       await FirebaseMessaging.instance
@@ -97,3 +102,4 @@ class LocalNotificationService {
     String? payload,
   ) async {}
 }
+*/

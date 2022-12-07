@@ -2,13 +2,14 @@
  * @author Noor Bhatia
  * Created on 28-07-2022
  */
+import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:grappus_mobile/typography/text_styles.dart';
 import 'package:grappus_mobile/utils/app_colors.dart';
 import 'package:grappus_mobile/utils/prefs.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 
 part 'theme_constants.dart';
+
 part 'theme_manager.dart';
 
 typedef CustomThemeBuilder = Widget Function(ThemeMode mode);

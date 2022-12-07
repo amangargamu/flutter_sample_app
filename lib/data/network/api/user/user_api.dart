@@ -1,10 +1,10 @@
+import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 import 'package:grappus_mobile/data/models/user/user_model.dart';
 import 'package:grappus_mobile/data/network/api/endpoints.dart';
 import 'package:grappus_mobile/data/network/api/error/error_handler.dart';
 import 'package:grappus_mobile/data/network/api/error/error_response.dart';
 import 'package:grappus_mobile/data/network/dio_client.dart';
-import 'package:dartz/dartz.dart';
-import 'package:dio/dio.dart';
 
 class UserApi {
   UserApi({required this.dioClient});
