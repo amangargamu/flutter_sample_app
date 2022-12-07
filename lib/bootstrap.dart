@@ -33,14 +33,14 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
 
   await runZonedGuarded(
     () async {
-      FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
+      //FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
       await BlocOverrides.runZoned(
         () async => runApp(await builder()),
         blocObserver: AppBlocObserver(),
       );
     },
     (error, stackTrace) {
-      FirebaseCrashlytics.instance.recordError(error, stackTrace);
+      //FirebaseCrashlytics.instance.recordError(error, stackTrace);
       log(error.toString(), stackTrace: stackTrace);
     },
   );
