@@ -1,0 +1,11 @@
+{
+    "@@locale": "gu",
+    "counterAppBarTitle": "કાઉન્ટર",
+    "@counterAppBarTitle": {
+        "description": "કાઉન્ટર પેજના એપબારમાં દર્શાવેલ ટેક્સ્ટ"
+    },
+    "changeLanguageTitle": "ભાષા બદલો",
+    "@changeLanguageTitle": {
+        "description": "Change language gujrati"
+    }
+}

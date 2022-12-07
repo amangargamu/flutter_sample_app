@@ -149,6 +149,15 @@ class Prefs with Clearable {
   static String get colorSizeProductGroupPlaceholder {
     return _prefs.getString(_colorSizeProductGroupKey) ?? '';
   }
+
+  /// Localization
+  static set appLocalizationCode(String localValue) {
+    _prefs.setString(_localizationPreference, localValue);
+  }
+
+  static String get appLocalizationCode {
+    return _prefs.getString(_localizationPreference) ?? 'en';
+  }
 }
 
 mixin Clearable {
@@ -170,3 +179,4 @@ const _productKey = 'productKey';
 const _sizeProductGroupKey = 'sizeProductGroupKey';
 const _colorSizeProductGroupKey = 'colorSizeProductGroupKey';
 const _themePreference = 'themePreference';
+const _localizationPreference = '_localizationPreference';

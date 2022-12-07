@@ -7,5 +7,5 @@ class KNotifications {
   static const notificationChannelId = 'com.grappus.mobile';
   static const notificationChannelName = 'FlutterSampleApp';
   static const notificationChannelDescription =
-      'Flutter Grappus Sample app notification channel for heads up notifications';
+      'Flutter Sample app notification channel for heads up notifications';
 }
